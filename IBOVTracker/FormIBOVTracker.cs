@@ -107,7 +107,7 @@ namespace IBOVTracker
 				{
 					{"Theoretical Quantity", "N"},
 					{"Part. (%)", "N"},
-					{"Preço Teórico", "C"},
+					{"Preço teórico", "C"},
 					{"Cotação", "C"},
 					{"Fechamento", "C"},
 					{"Variação", "P"},
