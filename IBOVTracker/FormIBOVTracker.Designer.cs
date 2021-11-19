@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormIBOVTracker));
 			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
 			this.materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
 			this.materialTabControl1 = new MaterialSkin.Controls.MaterialTabControl();
@@ -688,6 +689,7 @@
 			this.ClientSize = new System.Drawing.Size(800, 350);
 			this.Controls.Add(this.tableLayoutPanel1);
 			this.FormStyle = MaterialSkin.Controls.MaterialForm.FormStyles.ActionBar_None;
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.MinimumSize = new System.Drawing.Size(800, 350);
 			this.Name = "FormIBOVTracker";
 			this.Padding = new System.Windows.Forms.Padding(3, 24, 3, 3);

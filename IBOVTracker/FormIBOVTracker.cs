@@ -197,6 +197,7 @@ namespace IBOVTracker
 			}
 			if(ibov != null) ibov.Dispose();
 			base.Dispose();
+			GC.SuppressFinalize(this);
 		}
 		#endregion
 	}
