@@ -1,8 +1,8 @@
+using BCJ.Profit;
 using MaterialSkin;
 using MaterialSkin.Controls;
-using BCJ.Profit;
-using System.Data;
 using System.ComponentModel;
+using System.Data;
 using System.Globalization;
 using System.Text;
 
@@ -194,10 +194,11 @@ namespace IBOVTracker
 		private void TopSwitch_CheckedChanged(object sender, EventArgs e)
 		{
 			this.TopMost = TopSwitch.Checked;
-			if(TopSwitch.Checked)
+			if (TopSwitch.Checked)
 			{
 				StatusLabel.Text = "Janela com TopMost";
-			} else
+			}
+			else
 			{
 				StatusLabel.Text = "Janela sem TopMost";
 			}
@@ -207,12 +208,12 @@ namespace IBOVTracker
 		private bool isDisposing = false;
 		public new void Dispose()
 		{
-			lock(this)
+			lock (this)
 			{
 				if (isDisposing) return;
 				isDisposing = true;
 			}
-			if(ibov != null) ibov.Dispose();
+			if (ibov != null) ibov.Dispose();
 			base.Dispose();
 			GC.SuppressFinalize(this);
 		}

@@ -1,10 +1,6 @@
-﻿using System;
-using System.Data;
+﻿using System.Data;
 using System.Globalization;
-using System.IO;
-using System.Net.Http;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace BCJ.B3
 {
@@ -79,7 +75,7 @@ namespace BCJ.B3
 				}
 				while (!sr.EndOfStream)
 				{
-					string[] row = Regex.Split( (sr.ReadLine() ?? ""), ",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)");
+					string[] row = Regex.Split((sr.ReadLine() ?? ""), ",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)");
 
 					if (row[0] == "Reductor")
 					{

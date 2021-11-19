@@ -1,9 +1,6 @@
 using BCJ.B3;
-using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Diagnostics;
-using System.Threading.Tasks;
 
 namespace BCJ.Profit
 {
@@ -117,6 +114,40 @@ namespace BCJ.Profit
 				row[CNTheoreticalVariation] = CalcVariacaoTeorica(cotacao, precoTeorico);
 				row[CNVariation] = CalcVariacao(cotacao, precoTeorico, fechamento);
 				row.EndEdit();
+			}
+		}
+
+		private void UpdateData()
+		{
+			lock (this)
+			{
+				if (isDisposed)
+					return;
+
+				var refresh = GetRtdServer().RefreshData(topics.Count);
+
+				var qtdNotifications = refresh.GetLength(1);
+				for (int j = 0; j < qtdNotifications; j++)
+				{
+					if (refresh.GetValue(0, j) is int topicId)
+					{
+						if (topics.TryGetValue(topicId, out Topic? t) && t != null)
+						{
+							object? val = refresh.GetValue(1, j);
+							if (val != null)
+								t.LastReceivedValue = val;
+						}
+						else
+						{
+							Debug.WriteLine($"What came? {refresh.GetValue(0, j)}  -- {refresh.GetValue(1, j)}");
+						}
+					}
+				}
+				try
+				{
+					AfterUpdate?.Invoke(this);
+				}
+				catch { }
 			}
 		}
 		#endregion
@@ -236,29 +267,7 @@ namespace BCJ.Profit
 		public void UpdateNotify()
 		{
 			Count++;
-			var refresh = GetRtdServer().RefreshData(topics.Count);
-			var qtdNotifications = refresh.GetLength(1);
-			for (int j = 0; j < qtdNotifications; j++)
-			{
-				if (refresh.GetValue(0, j) is int topicId)
-				{
-					if (topics.TryGetValue(topicId, out Topic? t) && t != null)
-					{
-						object? val = refresh.GetValue(1, j);
-						if (val != null)
-							t.LastReceivedValue = val;
-					}
-					else
-					{
-						Debug.WriteLine($"What came? {refresh.GetValue(0, j)}  -- {refresh.GetValue(1, j)}");
-					}
-				}
-			}
-			try
-			{
-				AfterUpdate?.Invoke(this);
-			}
-			catch { }
+			Task.Run(() => this.UpdateData());
 		}
 
 		public void Disconnect()
