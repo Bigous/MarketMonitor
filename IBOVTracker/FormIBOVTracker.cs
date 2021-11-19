@@ -81,6 +81,19 @@ namespace IBOVTracker
 			};
 		}
 
+		private void MaintainDGVOk()
+		{
+			LeilaoValDGV.ClearSelection();
+			LeilaoDesDGV.ClearSelection();
+			MercadoValDGV.ClearSelection();
+			MercadoDesDGV.ClearSelection();
+
+			LeilaoValDGV.FirstDisplayedScrollingRowIndex = 0;
+			LeilaoDesDGV.FirstDisplayedScrollingRowIndex = 0;
+			MercadoValDGV.FirstDisplayedScrollingRowIndex = 0;
+			MercadoDesDGV.FirstDisplayedScrollingRowIndex = 0;
+		}
+
 
 		private async void LoadData()
 		{
@@ -126,10 +139,7 @@ namespace IBOVTracker
 				ConfigureIbovDGV(MercadoDesDGV, columnFormats, mercadoCols);
 				MercadoDesDGV.Sort(MercadoDesDGV.Columns["Variação"], ListSortDirection.Ascending);
 
-				LeilaoValDGV.ClearSelection();
-				LeilaoDesDGV.ClearSelection();
-				MercadoValDGV.ClearSelection();
-				MercadoDesDGV.ClearSelection();
+				MaintainDGVOk();
 
 				ReductorLabel.Text = $"Redutor: {ibov.Reductor.ToString(CultureInfo.CurrentCulture)}";
 				DateLabel.Text = ibov.FromWhen.Date.ToString("d");
@@ -170,10 +180,7 @@ namespace IBOVTracker
 
 				CalcLabel.Text = $"IBOV: {ibov.IBovReal:#} | Teórico: {ibov.IBovTeorico:#}";
 
-				LeilaoValDGV.ClearSelection();
-				LeilaoDesDGV.ClearSelection();
-				MercadoValDGV.ClearSelection();
-				MercadoDesDGV.ClearSelection();
+				MaintainDGVOk();
 			}
 			catch
 			{
