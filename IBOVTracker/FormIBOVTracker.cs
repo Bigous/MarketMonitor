@@ -4,6 +4,7 @@ using BCJ.Profit;
 using System.Data;
 using System.ComponentModel;
 using System.Globalization;
+using System.Text;
 
 namespace IBOVTracker
 {
@@ -22,12 +23,14 @@ namespace IBOVTracker
 		{
 			if (ibov is not null)
 			{
-				string str = "";
+				StringBuilder sb = new(ibov.Data.Rows.Count * 6);
 				foreach (DataRow row in ibov.Data.Rows)
 				{
-					str += $"{row["Code"]}, ";
+					sb.Append($"{row["Code"]}, ");
 				}
-				Clipboard.SetText(str);
+				sb.Length -= 2;
+				Clipboard.SetText(sb.ToString());
+				StatusLabel.Text = "IBOV copiado para o clipboard";
 			}
 		}
 
@@ -184,6 +187,13 @@ namespace IBOVTracker
 		private void TopSwitch_CheckedChanged(object sender, EventArgs e)
 		{
 			this.TopMost = TopSwitch.Checked;
+			if(TopSwitch.Checked)
+			{
+				StatusLabel.Text = "Janela com TopMost";
+			} else
+			{
+				StatusLabel.Text = "Janela sem TopMost";
+			}
 		}
 
 		#region IDisposable
