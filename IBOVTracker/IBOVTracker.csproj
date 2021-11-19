@@ -13,11 +13,11 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryType>git</RepositoryType>
     <NeutralLanguage>pt-BR</NeutralLanguage>
-    <AssemblyVersion>0.5.1.0</AssemblyVersion>
+    <AssemblyVersion>0.5.2.0</AssemblyVersion>
     <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
-    <FileVersion>0.5.1.0</FileVersion>
+    <FileVersion>0.5.2.0</FileVersion>
     <PackageProjectUrl>https://github.com/Bigous/MarketMonitor</PackageProjectUrl>
-    <Version>0.5.1</Version>
+    <Version>0.5.2</Version>
   </PropertyGroup>
 
   <ItemGroup>
