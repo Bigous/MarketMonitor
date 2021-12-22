@@ -369,6 +369,41 @@ namespace BCJ.Profit
 			}
 		}
 
+		public double IBovTeoricoPonderado
+		{
+			get
+			{
+				double ret = 0.0;
+				foreach (DataRow row in Data.Rows)
+				{
+					double tq = (double)row["Theoretical Quantity"];
+					double cot = 0.0;
+					if (row["Preço Teórico"] is double pt && pt > 0.0)
+					{
+						if (row[CNClosed] is double fechamento && fechamento > 0.0)
+						{
+							double variacao = (fechamento - pt) / fechamento;
+							if (Math.Abs(variacao) > 0.05)
+							{
+								// se a variação for maior que 5%, cosiderar 10% da variação (ou seria melhor desconsiderar a variação?)
+								// pt = fechamento + (fechamento * variacao * 0.1);
+								// Mudei de ideia e estou desconsiderando a variação...
+								pt = fechamento;
+							}
+						}
+						cot = pt;
+					}
+					else if (row[CNCotation] is double cotacao && cotacao > 0.0)
+						cot = cotacao;
+					else if (row[CNClosed] is double fechamento && fechamento > 0.0)
+						cot = fechamento;
+
+					ret += tq * cot;
+				}
+				return ret / Reductor;
+			}
+		}
+
 		public int IBovEmLeilao
 		{
 			get

@@ -34,6 +34,8 @@
 			this.materialTabControl1 = new MaterialSkin.Controls.MaterialTabControl();
 			this.tabPage1 = new System.Windows.Forms.TabPage();
 			this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+			this.GapPonderadoLabel = new MaterialSkin.Controls.MaterialLabel();
+			this.materialLabel14 = new MaterialSkin.Controls.MaterialLabel();
 			this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
 			this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
 			this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
@@ -94,7 +96,7 @@
 			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
 			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
 			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
-			this.tableLayoutPanel1.Size = new System.Drawing.Size(794, 323);
+			this.tableLayoutPanel1.Size = new System.Drawing.Size(794, 347);
 			this.tableLayoutPanel1.TabIndex = 0;
 			// 
 			// materialTabSelector1
@@ -122,7 +124,7 @@
 			this.materialTabControl1.Multiline = true;
 			this.materialTabControl1.Name = "materialTabControl1";
 			this.materialTabControl1.SelectedIndex = 0;
-			this.materialTabControl1.Size = new System.Drawing.Size(788, 243);
+			this.materialTabControl1.Size = new System.Drawing.Size(788, 267);
 			this.materialTabControl1.TabIndex = 1;
 			// 
 			// tabPage1
@@ -131,7 +133,7 @@
 			this.tabPage1.Location = new System.Drawing.Point(4, 24);
 			this.tabPage1.Name = "tabPage1";
 			this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage1.Size = new System.Drawing.Size(780, 215);
+			this.tabPage1.Size = new System.Drawing.Size(780, 239);
 			this.tabPage1.TabIndex = 0;
 			this.tabPage1.Text = "Gap";
 			this.tabPage1.UseVisualStyleBackColor = true;
@@ -145,19 +147,21 @@
 			this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
 			this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
 			this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+			this.tableLayoutPanel2.Controls.Add(this.GapPonderadoLabel, 1, 5);
+			this.tableLayoutPanel2.Controls.Add(this.materialLabel14, 0, 5);
 			this.tableLayoutPanel2.Controls.Add(this.materialLabel1, 0, 0);
 			this.tableLayoutPanel2.Controls.Add(this.materialLabel2, 0, 1);
 			this.tableLayoutPanel2.Controls.Add(this.materialLabel3, 0, 2);
 			this.tableLayoutPanel2.Controls.Add(this.materialLabel4, 0, 3);
 			this.tableLayoutPanel2.Controls.Add(this.materialLabel5, 0, 4);
-			this.tableLayoutPanel2.Controls.Add(this.materialLabel6, 0, 5);
-			this.tableLayoutPanel2.Controls.Add(this.materialLabel7, 0, 6);
+			this.tableLayoutPanel2.Controls.Add(this.materialLabel6, 0, 6);
+			this.tableLayoutPanel2.Controls.Add(this.materialLabel7, 0, 7);
 			this.tableLayoutPanel2.Controls.Add(this.IBOVLabel, 1, 0);
 			this.tableLayoutPanel2.Controls.Add(this.IBOVTeoricoLabel, 1, 1);
 			this.tableLayoutPanel2.Controls.Add(this.WINFUTLabel, 1, 2);
 			this.tableLayoutPanel2.Controls.Add(this.GapTeoricoLabel, 1, 4);
-			this.tableLayoutPanel2.Controls.Add(this.EmLeilaoLabel, 1, 5);
-			this.tableLayoutPanel2.Controls.Add(this.ReprLeilaoLabel, 1, 6);
+			this.tableLayoutPanel2.Controls.Add(this.EmLeilaoLabel, 1, 6);
+			this.tableLayoutPanel2.Controls.Add(this.ReprLeilaoLabel, 1, 7);
 			this.tableLayoutPanel2.Controls.Add(this.materialLabel8, 2, 0);
 			this.tableLayoutPanel2.Controls.Add(this.materialLabel9, 4, 0);
 			this.tableLayoutPanel2.Controls.Add(this.materialLabel10, 2, 1);
@@ -168,13 +172,13 @@
 			this.tableLayoutPanel2.Controls.Add(this.LeilaoDesDGV, 3, 2);
 			this.tableLayoutPanel2.Controls.Add(this.MercadoValDGV, 4, 2);
 			this.tableLayoutPanel2.Controls.Add(this.MercadoDesDGV, 5, 2);
-			this.tableLayoutPanel2.Controls.Add(this.CopyIBOVButton, 0, 7);
+			this.tableLayoutPanel2.Controls.Add(this.CopyIBOVButton, 0, 8);
 			this.tableLayoutPanel2.Controls.Add(this.GAPTB, 1, 3);
-			this.tableLayoutPanel2.Controls.Add(this.TopSwitch, 1, 7);
+			this.tableLayoutPanel2.Controls.Add(this.TopSwitch, 1, 8);
 			this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
 			this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-			this.tableLayoutPanel2.RowCount = 8;
+			this.tableLayoutPanel2.RowCount = 9;
 			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
 			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
 			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
@@ -182,9 +186,98 @@
 			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
 			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
 			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
 			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-			this.tableLayoutPanel2.Size = new System.Drawing.Size(774, 209);
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel2.Size = new System.Drawing.Size(774, 233);
 			this.tableLayoutPanel2.TabIndex = 0;
+			// 
+			// GapPonderadoLabel
+			// 
+			this.GapPonderadoLabel.AutoSize = true;
+			this.GapPonderadoLabel.Depth = 0;
+			this.GapPonderadoLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.GapPonderadoLabel.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+			this.GapPonderadoLabel.HighEmphasis = true;
+			this.GapPonderadoLabel.Location = new System.Drawing.Point(153, 146);
+			this.GapPonderadoLabel.MouseState = MaterialSkin.MouseState.HOVER;
+			this.GapPonderadoLabel.Name = "GapPonderadoLabel";
+			this.GapPonderadoLabel.Size = new System.Drawing.Size(84, 24);
+			this.GapPonderadoLabel.TabIndex = 27;
+			this.GapPonderadoLabel.Text = "??????";
+			this.GapPonderadoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// materialLabel14
+			// 
+			this.materialLabel14.AutoSize = true;
+			this.materialLabel14.Depth = 0;
+			this.materialLabel14.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.materialLabel14.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+			this.materialLabel14.Location = new System.Drawing.Point(3, 146);
+			this.materialLabel14.MouseState = MaterialSkin.MouseState.HOVER;
+			this.materialLabel14.Name = "materialLabel14";
+			this.materialLabel14.Size = new System.Drawing.Size(144, 24);
+			this.materialLabel14.TabIndex = 26;
+			this.materialLabel14.Text = "Gap Ponderado";
+			this.materialLabel14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// materialLabel1
 			// 
@@ -262,7 +355,7 @@
 			this.materialLabel6.Depth = 0;
 			this.materialLabel6.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.materialLabel6.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-			this.materialLabel6.Location = new System.Drawing.Point(3, 146);
+			this.materialLabel6.Location = new System.Drawing.Point(3, 170);
 			this.materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
 			this.materialLabel6.Name = "materialLabel6";
 			this.materialLabel6.Size = new System.Drawing.Size(144, 24);
@@ -276,7 +369,7 @@
 			this.materialLabel7.Depth = 0;
 			this.materialLabel7.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.materialLabel7.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-			this.materialLabel7.Location = new System.Drawing.Point(3, 170);
+			this.materialLabel7.Location = new System.Drawing.Point(3, 194);
 			this.materialLabel7.MouseState = MaterialSkin.MouseState.HOVER;
 			this.materialLabel7.Name = "materialLabel7";
 			this.materialLabel7.Size = new System.Drawing.Size(144, 24);
@@ -347,7 +440,7 @@
 			this.EmLeilaoLabel.Depth = 0;
 			this.EmLeilaoLabel.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.EmLeilaoLabel.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-			this.EmLeilaoLabel.Location = new System.Drawing.Point(153, 146);
+			this.EmLeilaoLabel.Location = new System.Drawing.Point(153, 170);
 			this.EmLeilaoLabel.MouseState = MaterialSkin.MouseState.HOVER;
 			this.EmLeilaoLabel.Name = "EmLeilaoLabel";
 			this.EmLeilaoLabel.Size = new System.Drawing.Size(84, 24);
@@ -361,7 +454,7 @@
 			this.ReprLeilaoLabel.Depth = 0;
 			this.ReprLeilaoLabel.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.ReprLeilaoLabel.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-			this.ReprLeilaoLabel.Location = new System.Drawing.Point(153, 170);
+			this.ReprLeilaoLabel.Location = new System.Drawing.Point(153, 194);
 			this.ReprLeilaoLabel.MouseState = MaterialSkin.MouseState.HOVER;
 			this.ReprLeilaoLabel.Name = "ReprLeilaoLabel";
 			this.ReprLeilaoLabel.Size = new System.Drawing.Size(84, 24);
@@ -468,9 +561,10 @@
 			this.LeilaoValDGV.Name = "LeilaoValDGV";
 			this.LeilaoValDGV.ReadOnly = true;
 			this.LeilaoValDGV.RowHeadersVisible = false;
-			this.tableLayoutPanel2.SetRowSpan(this.LeilaoValDGV, 6);
+			this.LeilaoValDGV.RowHeadersWidth = 62;
+			this.tableLayoutPanel2.SetRowSpan(this.LeilaoValDGV, 7);
 			this.LeilaoValDGV.RowTemplate.Height = 25;
-			this.LeilaoValDGV.Size = new System.Drawing.Size(127, 155);
+			this.LeilaoValDGV.Size = new System.Drawing.Size(127, 179);
 			this.LeilaoValDGV.TabIndex = 19;
 			// 
 			// LeilaoDesDGV
@@ -486,9 +580,10 @@
 			this.LeilaoDesDGV.Name = "LeilaoDesDGV";
 			this.LeilaoDesDGV.ReadOnly = true;
 			this.LeilaoDesDGV.RowHeadersVisible = false;
-			this.tableLayoutPanel2.SetRowSpan(this.LeilaoDesDGV, 6);
+			this.LeilaoDesDGV.RowHeadersWidth = 62;
+			this.tableLayoutPanel2.SetRowSpan(this.LeilaoDesDGV, 7);
 			this.LeilaoDesDGV.RowTemplate.Height = 25;
-			this.LeilaoDesDGV.Size = new System.Drawing.Size(127, 155);
+			this.LeilaoDesDGV.Size = new System.Drawing.Size(127, 179);
 			this.LeilaoDesDGV.TabIndex = 20;
 			// 
 			// MercadoValDGV
@@ -504,9 +599,10 @@
 			this.MercadoValDGV.Name = "MercadoValDGV";
 			this.MercadoValDGV.ReadOnly = true;
 			this.MercadoValDGV.RowHeadersVisible = false;
-			this.tableLayoutPanel2.SetRowSpan(this.MercadoValDGV, 6);
+			this.MercadoValDGV.RowHeadersWidth = 62;
+			this.tableLayoutPanel2.SetRowSpan(this.MercadoValDGV, 7);
 			this.MercadoValDGV.RowTemplate.Height = 25;
-			this.MercadoValDGV.Size = new System.Drawing.Size(127, 155);
+			this.MercadoValDGV.Size = new System.Drawing.Size(127, 179);
 			this.MercadoValDGV.TabIndex = 21;
 			// 
 			// MercadoDesDGV
@@ -522,9 +618,10 @@
 			this.MercadoDesDGV.Name = "MercadoDesDGV";
 			this.MercadoDesDGV.ReadOnly = true;
 			this.MercadoDesDGV.RowHeadersVisible = false;
-			this.tableLayoutPanel2.SetRowSpan(this.MercadoDesDGV, 6);
+			this.MercadoDesDGV.RowHeadersWidth = 62;
+			this.tableLayoutPanel2.SetRowSpan(this.MercadoDesDGV, 7);
 			this.MercadoDesDGV.RowTemplate.Height = 25;
-			this.MercadoDesDGV.Size = new System.Drawing.Size(129, 155);
+			this.MercadoDesDGV.Size = new System.Drawing.Size(129, 179);
 			this.MercadoDesDGV.TabIndex = 22;
 			// 
 			// CopyIBOVButton
@@ -535,7 +632,7 @@
 			this.CopyIBOVButton.Dock = System.Windows.Forms.DockStyle.Bottom;
 			this.CopyIBOVButton.HighEmphasis = true;
 			this.CopyIBOVButton.Icon = null;
-			this.CopyIBOVButton.Location = new System.Drawing.Point(4, 200);
+			this.CopyIBOVButton.Location = new System.Drawing.Point(4, 224);
 			this.CopyIBOVButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
 			this.CopyIBOVButton.MouseState = MaterialSkin.MouseState.HOVER;
 			this.CopyIBOVButton.Name = "CopyIBOVButton";
@@ -571,7 +668,7 @@
 			this.TopSwitch.AutoSize = true;
 			this.TopSwitch.Depth = 0;
 			this.TopSwitch.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.TopSwitch.Location = new System.Drawing.Point(150, 194);
+			this.TopSwitch.Location = new System.Drawing.Point(150, 218);
 			this.TopSwitch.Margin = new System.Windows.Forms.Padding(0);
 			this.TopSwitch.MouseLocation = new System.Drawing.Point(-1, -1);
 			this.TopSwitch.MouseState = MaterialSkin.MouseState.HOVER;
@@ -589,7 +686,7 @@
 			this.tabPage2.Location = new System.Drawing.Point(4, 24);
 			this.tabPage2.Name = "tabPage2";
 			this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage2.Size = new System.Drawing.Size(780, 215);
+			this.tabPage2.Size = new System.Drawing.Size(780, 239);
 			this.tabPage2.TabIndex = 1;
 			this.tabPage2.Text = "IBOV";
 			this.tabPage2.UseVisualStyleBackColor = true;
@@ -611,7 +708,7 @@
 			this.IBOVTP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
 			this.IBOVTP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
 			this.IBOVTP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
-			this.IBOVTP.Size = new System.Drawing.Size(774, 209);
+			this.IBOVTP.Size = new System.Drawing.Size(774, 233);
 			this.IBOVTP.TabIndex = 0;
 			// 
 			// ReductorLabel
@@ -664,8 +761,9 @@
 			this.IBOVDGV.Location = new System.Drawing.Point(3, 27);
 			this.IBOVDGV.Name = "IBOVDGV";
 			this.IBOVDGV.RowHeadersVisible = false;
+			this.IBOVDGV.RowHeadersWidth = 62;
 			this.IBOVDGV.RowTemplate.Height = 25;
-			this.IBOVDGV.Size = new System.Drawing.Size(768, 179);
+			this.IBOVDGV.Size = new System.Drawing.Size(768, 203);
 			this.IBOVDGV.TabIndex = 3;
 			// 
 			// StatusLabel
@@ -674,7 +772,7 @@
 			this.StatusLabel.Depth = 0;
 			this.StatusLabel.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.StatusLabel.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-			this.StatusLabel.Location = new System.Drawing.Point(3, 299);
+			this.StatusLabel.Location = new System.Drawing.Point(3, 323);
 			this.StatusLabel.MouseState = MaterialSkin.MouseState.HOVER;
 			this.StatusLabel.Name = "StatusLabel";
 			this.StatusLabel.Size = new System.Drawing.Size(788, 24);
@@ -686,11 +784,11 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(800, 350);
+			this.ClientSize = new System.Drawing.Size(800, 374);
 			this.Controls.Add(this.tableLayoutPanel1);
 			this.FormStyle = MaterialSkin.Controls.MaterialForm.FormStyles.ActionBar_None;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-			this.MinimumSize = new System.Drawing.Size(800, 350);
+			this.MinimumSize = new System.Drawing.Size(800, 374);
 			this.Name = "FormIBOVTracker";
 			this.Padding = new System.Windows.Forms.Padding(3, 24, 3, 3);
 			this.Text = "Bigous IBOV Tracker";
@@ -753,5 +851,7 @@
 		private MaterialSkin.Controls.MaterialButton CopyIBOVButton;
 		private MaterialSkin.Controls.MaterialTextBox GAPTB;
 		private MaterialSkin.Controls.MaterialSwitch TopSwitch;
+		private MaterialSkin.Controls.MaterialLabel GapPonderadoLabel;
+		private MaterialSkin.Controls.MaterialLabel materialLabel14;
 	}
 }

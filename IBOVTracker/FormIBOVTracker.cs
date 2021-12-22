@@ -175,6 +175,10 @@ namespace IBOVTracker
 				GapTeoricoLabel.Text = gapTeorico.ToString("#");
 				GapTeoricoLabel.UseAccent = gapTeorico < 0.0;
 
+				double gapTeoricoPonderado = (ibov.IBovTeoricoPonderado + double.Parse(GAPTB.Text)) - ibov.WinFut;
+				GapPonderadoLabel.Text = gapTeorico.ToString("#");
+				GapPonderadoLabel.UseAccent = gapTeorico < 0.0;
+
 				EmLeilaoLabel.Text = ibov.IBovEmLeilao.ToString();
 				ReprLeilaoLabel.Text = (ibov.IBovReprLeilao).ToString("0.00%");
 

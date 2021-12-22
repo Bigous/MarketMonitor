@@ -9,6 +9,8 @@ namespace IBOVTracker
 		static void Main()
 		{
 			ApplicationConfiguration.Initialize();
+			Application.EnableVisualStyles();
+			Application.SetCompatibleTextRenderingDefault(true);
 			using (Form main = new FormIBOVTracker())
 			{
 				Application.Run(main);
