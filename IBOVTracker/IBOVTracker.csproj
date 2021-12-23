@@ -21,18 +21,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <COMReference Include="RTDTrading">
-      <WrapperTool>tlbimp</WrapperTool>
-      <VersionMinor>0</VersionMinor>
-      <VersionMajor>1</VersionMajor>
-      <Guid>efcfbdca-78a5-450b-8228-346c4f44d5b8</Guid>
-      <Lcid>0</Lcid>
-      <Isolated>false</Isolated>
-      <EmbedInteropTypes>true</EmbedInteropTypes>
-    </COMReference>
-  </ItemGroup>
-
-  <ItemGroup>
     <Content Include="IBOVTracker.ico" />
   </ItemGroup>
 
@@ -49,6 +37,11 @@
 
   <ItemGroup>
     <PackageReference Include="MaterialSkin.2" Version="2.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BCJ.B3\BCJ.B3.csproj" />
+    <ProjectReference Include="..\BCJ.Profit\BCJ.Profit.csproj" />
   </ItemGroup>
 
   <ItemGroup>
