@@ -147,7 +147,9 @@ namespace BCJ.Profit
 				{
 					AfterUpdate?.Invoke(this);
 				}
-				catch { }
+				catch (Exception e){
+					Debug.WriteLine(e);
+				}
 			}
 		}
 		#endregion

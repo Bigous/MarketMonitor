@@ -1,0 +1,49 @@
+﻿<Window
+    x:Class="IBovTrackerWinUI.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:IBovTrackerWinUI"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+	<Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="24" />
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="24"/>
+		</Grid.RowDefinitions>
+		<Border
+			Margin="0, 0, 120, 0"
+			Background="DarkMagenta"
+			x:Name="CustomTitleBar" 
+		>
+		</Border>
+		<TextBlock 
+				Grid.Column="0" Grid.Row="0" 
+				Text="Bigous IBovTracker" 
+				VerticalAlignment="Center"
+				HorizontalAlignment="Center"
+			/>
+		<NavigationView 
+			Grid.Column="0" Grid.Row="1"
+			x:Name="nvMenu" 
+			PaneDisplayMode="Top"
+			IsBackButtonVisible="Collapsed"
+			SelectionChanged="NavigationView_SelectionChanged"
+			IsEnabled="False"
+			>
+			<NavigationView.MenuItems>
+				<NavigationViewItem  Content="Gaps" Tag="GapsPage" SelectsOnInvoked="True" x:Name="nviGaps"/>
+				<NavigationViewItem  Content="IBOV" Tag="IBOVPage" SelectsOnInvoked="True"/>
+			</NavigationView.MenuItems>
+			<Frame x:Name="contentFrame" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+				<ProgressRing Width="32" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+			</Frame>
+		</NavigationView>
+		<Border Grid.Column="0" Grid.Row="2" BorderThickness="2" BorderBrush="#303030" Background="#202020">
+			<TextBlock x:Name="statusLabel" Text="Carregando informações da B3..." Grid.Column="0" Grid.Row="9" Grid.ColumnSpan="6" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+		</Border>
+	</Grid>
+
+</Window>

@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "IBovTrackerWinUI (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "IBovTrackerWinUI (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
